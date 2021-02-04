@@ -174,7 +174,7 @@
                 if(this.ball[tmp].x + this.ball[tmp].speedX > this.canvas.width-this.ball[tmp].Radius || this.ball[tmp].x + this.ball[tmp].speedX  < this.ball[tmp].Radius) {//ตรวจสอบการชนระหว่างลูกบอลกับกำแพงขอบข้าง
                     this.ball[tmp].bounceX();
                 }
-                if(this.ball[tmp].y + this.ball[tmp].speedY < this.ball[tmp].Radius) {//ตรวจสอบการชนระหว่างลูกบอลกับกำแพงขอบบน
+                if(this.ball[tmp].y + this.ball[tmp].speedY < 0) {//ตรวจสอบการชนระหว่างลูกบอลกับกำแพงขอบบน
                     this.ball[tmp].bounceY();
                 }else if(this.ball[tmp].y + this.ball[tmp].speedY > this.canvas.height-this.ball[tmp].Radius){//ถ้าลูกบอลถูกรับโดย Paddle
                     if( this.ball[tmp].x > this.paddle.paddleX && this.ball[tmp].x < this.paddle.paddleX + this.paddle.paddleWidth){
